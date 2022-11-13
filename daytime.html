@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>daytime</title>
+</head>
+<body>
+<input type="text" name="day" value=" ">
+<button onclick="tinh()">Tính số ngày</button>
+<p id="result">tháng</p>
+<script>
+    function tinh() {
+        let day= parseInt(document.getElementsByName("day")[0].value);
+        switch (day) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                document.getElementById("result").innerHTML= ("tháng "+day+" có 31 ngày");
+                break;
+            case 2:
+                document.getElementById("result").innerHTML= ("tháng "+day+" có 28 hoặc 29 ngày");
+                break;
+            default:
+                document.getElementById("result").innerHTML= ("tháng "+day+" có 30 ngày");
+        }
+    }
+
+
+</script>
+</body>
+</html>
